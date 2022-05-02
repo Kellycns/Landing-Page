@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+::-webkit-scrollbar{
+    display: none;
+}
 body{
     font-family: 'Roboto', sans-serif;
     margin: 40px 100px;
@@ -18,12 +21,17 @@ span, .nav_red{
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    align-items: center;
     margin-bottom: 30px;
+}
+nav{
+    width: 300px;
+    text-align: center;
 }
 a{
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 main{
     display: flex;
@@ -47,7 +55,21 @@ button{
     border: none;
     width: 300px;
     height: 47px;
+    cursor: pointer;
 }
 img{
     height: 500px;
+}
+@media (max-width: 960px){
+    main{
+        flex-direction: column-reverse;
+    }
+    img{
+        height: 400px;
+    }
+}
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+    }
 }
